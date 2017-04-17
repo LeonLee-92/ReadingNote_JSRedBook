@@ -21,5 +21,5 @@
 
 ## 变量、作用域和内存
 
-* 基本类型和引用类型
+* [基本类型和引用类型](bian-liang-3001-zuo-yong-yu-he-nei-cun/ji-ben-lei-xing-he-yin-yong-lei-xing.md)
 
