@@ -77,8 +77,21 @@
 > var person = new Object();
 > setName(person);
 > alert(person.name);  // "liyan"
->
 > ```
+
+#### 检测类型：
+
+> ##### typeof\(\)：检测基本类型（Undefined、Null、Boolean、Number 和 String）和Object
+>
+> ##### instanceof：检测Object类型
+
+#### 执行环境及作用域：
+
+> ![](/assets/00343.jpg)
+
+> ![](/assets/00347.jpg)
+
+
 
 
 
