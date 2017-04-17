@@ -3,7 +3,7 @@
 > ##### 基本类型：Undefined、Null、Boolean、Number 和 String
 >
 > ##### 引用类型：Object
-
+>
 > #### Tip：
 >
 > 在 JavaScript 中 String 不是引用类型。
