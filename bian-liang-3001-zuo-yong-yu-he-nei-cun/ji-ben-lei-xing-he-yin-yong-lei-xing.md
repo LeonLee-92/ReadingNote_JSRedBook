@@ -39,6 +39,46 @@
 > obj1.name = "liyan";
 > alert(obj2.name);  // "liyan"
 > ```
+>
+> ![](/assets/00319.jpg)
+
+#### 传递参数：
+
+> ##### 基本类型：
+>
+> ```js
+> function addTen(num) {
+>     num += 10;
+>     return num;
+> }
+> var count = 20;
+> var result = addTen(count);
+> alert(count);   // 20 互不影响
+> alert(result);  // 30
+> ```
+>
+> 引用类型：
+>
+> ```js
+> function setName(obj) {
+>     obj.name = "liyan";
+> }
+> var person = new Object();
+> setName(person);
+> alert(person.name);  // "liyan"
+> ```
+>
+> ```js
+> function setName(obj) {
+>     obj.name = "liyan";
+>     obj = new Object();   // 改变了局部变量的引用，该对象会在函数执行完毕后立即销毁
+>     obj.name = "zhangsan";
+> }
+> var person = new Object();
+> setName(person);
+> alert(person.name);  // "liyan"
+>
+> ```
 
 
 
