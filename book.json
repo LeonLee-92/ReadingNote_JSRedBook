@@ -1,5 +1,7 @@
-"title" : "ReadingNotes_JSRedBook",
-"author" : "Leon Lee",
-"plugins": [
-    "-search"
-]
+{
+	"title" : "ReadingNotes_JSRedBook",
+	"author" : "Leon Lee",
+	"plugins": [
+	    "-search"
+	]
+}
