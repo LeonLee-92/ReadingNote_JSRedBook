@@ -1,13 +1,14 @@
 {
 	"title" : "ReadingNotes_JSRedBook",
 	"author" : "Leon Lee",
-	"plugins": [
-	    "-search"
-	],
+	"links" : {
+	    "sidebar" : {
+	    }
+	},
 	"pluginsConfig": {
-	    "fontsettings": {
-	        "theme": "night",
-	        "family": "sans",
+	    "font-settings": {
+	        "theme": "Night",
+	        "family": "Sans",
 	        "size":  1
 	    }
 	}
