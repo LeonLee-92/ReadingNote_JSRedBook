@@ -1,6 +1,8 @@
-#### 基本类型：Undefined、Null、Boolean、Number 和 String
+#### 分类
 
-#### 引用类型：Object
+> ##### 基本类型：Undefined、Null、Boolean、Number 和 String
+>
+> ##### 引用类型：Object
 
 > #### Tip：
 >
@@ -15,7 +17,7 @@
 > ```
 >
 > ##### 注意：给基本类型添加属性，并不会报错
-
+>
 > ```
 > var name = "liyan";
 > name.age = 27;
