@@ -13,15 +13,31 @@
 > ```js
 > var person = new Object();
 > person.name = "liyan";
-> alert(person.name);  // liyan
+> alert(person.name);  // "liyan"
 > ```
 >
 > ##### 注意：给基本类型添加属性，并不会报错
 >
-> ```
+> ```js
 > var name = "liyan";
 > name.age = 27;
 > alert(name.age);  // undefined
+> ```
+
+#### 变量赋值：
+
+> ```js
+> var num1 = 5;
+> var num2 = num1;
+> ```
+>
+> ![](/assets/00192.jpg)
+>
+> ```js
+> var obj1 = new Object();
+> var obj2 = obj1;
+> obj1.name = "liyan";
+> alert(obj2.name);  // "liyan"
 > ```
 
 
