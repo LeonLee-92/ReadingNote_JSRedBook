@@ -40,21 +40,21 @@
 
 > ##### instanceof :
 >
-> > ```
+> > ```js
 > > if (value instanceof Array){
 > >     // DoSomething
 > > }
 > > ```
->
+> >
 > > ##### 存在的问题：如果网页中包含多个框架，那实际上就存在两个以上不同的全局执行环境，从而存在两个以上不同版本的Array构造函数。
 >
 > ##### Array.isArray\(\) :
 >
+> ```js
+> if (Array.isArray(value)){
+>     // DoSomething
+> }
 > ```
->
-> ```
-
-
 
 
 
