@@ -17,5 +17,42 @@
 > }
 > ```
 
+#### 对象字面量也是向函数传递大量可选参数的首选方式：
+
+> ```js
+> function displayInfo(args){
+>     var output = "";
+>     if(typeof args.name == "string"){
+>         output += "Name: " + args.name + "\n";
+>     }
+>     if(typeof args.age == "number"){
+>         output += "Age: " + args.age + "\n";
+>     }
+>     alert(output);
+> }
+> displayInfo({
+>    name: "liyan",
+>    age: 18 
+> });
+> displayInfo({
+>    name: "liyan",
+> });
+> ```
+
+#### 还可以使用方括号访问属性：
+
+> ```js
+> alert(person.name); 
+> // 等同于
+> alert(person["name"]); 
+> ```
+>
+> ```js
+> var propertyName = "first name"; //点语法无法访问的属性
+> person[propertyName] = "liyan";  //通过方括号访问
+> ```
+
+
+
 
 
