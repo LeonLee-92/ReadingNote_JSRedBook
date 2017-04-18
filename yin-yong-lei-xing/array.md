@@ -56,5 +56,59 @@
 > }
 > ```
 
+#### 转换方法：
+
+> ##### toString\(\) 和 valueOf\(\) :
+>
+> > 调用数组元素每项的toString\(\)方法，以逗号分隔拼接字符串
+> >
+> > ```js
+> > var colors = ["red", "blue", "green"];
+> > alert(colors.toString());  // "red,blue,green"
+> > alert(colors.valueOf());   // "red,blue,green"
+> > alert(colors);  // 底层调用了 colors.toString()
+> > ```
+>
+> ##### toLocaleString\(\) :
+>
+> > 调用数组元素每项的toString\(\)方法，以逗号分隔拼接字符串。通常和toString\(\)方法返回相同
+> >
+> > ```js
+> > var person1 = {
+> >     toLocaleString: function() {
+> >         return "123";
+> >     },
+> >     toString: function() {
+> >         return "456";    
+> >     }
+> > }
+> > var person2 = {
+> >     toLocaleString: function() {
+> >         return "abc";
+> >     },
+> >     toString: function() {
+> >         return "def";    
+> >     }
+> > }
+> > var people = [person1, person2];
+> > alert(people);                   // "456,def"
+> > alert(people.toString());        // "456,def"
+> > alert(people.toLocaleString());  // "123,abc"
+> > ```
+>
+> ##### join\(\) :
+>
+> > ```js
+> > var colors = ["red", "blue", "green"];
+> > alert(colors.join(','));  // "red,blue,green"
+> > alert(colors.join('||'));  // "red||blue||green"
+> > ```
+>
+> > ##### 当不传参或传入undefined时，使用逗号分隔
+
+
+
+
+
 
 
