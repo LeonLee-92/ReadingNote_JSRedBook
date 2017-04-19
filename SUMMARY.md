@@ -30,4 +30,5 @@
 * [Array](yin-yong-lei-xing/array.md)
 * [Date](yin-yong-lei-xing/date.md)
 * [RegExp](yin-yong-lei-xing/regexp.md)
+* Function
 
