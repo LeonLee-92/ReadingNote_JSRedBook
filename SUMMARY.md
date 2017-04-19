@@ -29,4 +29,5 @@
 * [Object](yin-yong-lei-xing/objecthe-array.md)
 * [Array](yin-yong-lei-xing/array.md)
 * [Date](yin-yong-lei-xing/date.md)
+* RegExp
 
