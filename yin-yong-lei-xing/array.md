@@ -140,7 +140,7 @@
 > > var values = [0,1.5,10,15];
 > > alert(values.sort());  // "0,1.5,10,15"
 > > ```
->
+> >
 > > 可传比较函数：
 > >
 > > ```js
@@ -170,7 +170,7 @@
 > > var colors2 = colors.slice(1);    // ["green", "blue", "yellow", "purple"]
 > > var colors3 = colors.slice(1,3);  // ["green", "blue"]
 > > ```
->
+> >
 > > slice\(\) 参数为负数时，顺序倒数
 > >
 > > ```js
@@ -225,13 +225,13 @@
 #### 迭代方法：
 
 > ##### forEach\(\) :依次执行，没有返回值
-
+>
 > ##### every\(\) :每一项都返回true，则返回true
-
+>
 > ##### some\(\) :任一项返回true，则返回true
-
+>
 > ##### filter\(\) :返回会返回true的项组成的数组
-
+>
 > ##### map\(\) :返回每项执行函数返回结果组成的数组
 >
 > ```js
@@ -255,15 +255,14 @@
 >     return (item * 2);
 > });
 > alert(mapResult);    // [2,4,6,8,10,8,6,4,2]
->
 > ```
 
 #### 缩小方法：
 
 > ##### reduce\(\) :正序累计执行函数
-
+>
 > ##### reduceRight\(\) :倒序累计执行函数
-
+>
 > ```js
 > var values = [1,2,3,4,5];
 > var sum = values.reduce(function(prev,cur){ 
@@ -281,10 +280,6 @@
 > }, 100); 
 > alert(sum);  // 115
 > ```
-
-
-
-
 
 
 
