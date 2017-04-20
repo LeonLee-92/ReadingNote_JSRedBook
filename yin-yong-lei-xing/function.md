@@ -212,6 +212,8 @@
 > > alert(sayHi.length);      // 0
 > > ```
 >
+> ##### toString\(\)、toLocaleString\(\)和valueOf\(\)都返回函数代码
+>
 > ##### prototype属性：
 >
 > > ##### 不可枚举，不能使用for-in遍历出
@@ -265,7 +267,15 @@
 > > > alert(callSum(10, 10));    // 3
 > > > ```
 
-#### 
+
+
+
+
+
+
+
+
+
 
 
 
