@@ -1,7 +1,7 @@
 #### 创建：
 
 > ##### 函数声明
-
+>
 > ```js
 > function sum (num1, num2) {
 >     return num1 + num2;
@@ -69,7 +69,7 @@
 #### 作为值传递：
 
 > ##### 作为参数：
-
+>
 > ```js
 > function callSomeFunction(someFunction, someArgument){
 >     return someFunction(someArgument);
@@ -149,7 +149,7 @@
 > > alert(factorial2(5));    // 120   可以正常递归
 > > alert(factorial(5));    // 0
 > > ```
-
+>
 > #### this属性：
 >
 > ##### 指针，应用函数的执行环境
@@ -165,7 +165,7 @@
 > o.sayColor = sayColor();
 > o.sayColor();   // blue
 > ```
-
+>
 > #### caller属性：
 >
 > ##### 指针，指向调用当前函数的函数，全局作用域的函数返回null
@@ -216,7 +216,20 @@
 >
 > > ##### 不可枚举，不能使用for-in遍历出
 >
-> ##### apply\(\) 和 call\(\)
+> ##### bind\(\) :
+>
+> > ```js
+> > var num = 1; 
+> > function sum(num){
+> >     return this.num;
+> > }
+> > function callSum(num){
+> >     return sum.call(this, num);
+> > }
+> > alert(callSum(100));    // 1
+> > ```
+>
+> ##### apply\(\) 和 call\(\) :
 >
 > > #### 用途：在指定作用域中调用函数，等同于设置函数内部的this值。
 > >
@@ -252,13 +265,7 @@
 > > > alert(callSum(10, 10));    // 3
 > > > ```
 
-
-
-
-
-
-
-
+#### 
 
 
 
