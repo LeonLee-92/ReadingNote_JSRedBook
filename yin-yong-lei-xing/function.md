@@ -220,13 +220,13 @@
 >
 > > ```js
 > > var num = 1; 
+> > var o = {num: 100};
 > > function sum(num){
-> >     return this.num;
+> >     alert(this.num);
 > > }
-> > function callSum(num){
-> >     return sum.call(this, num);
-> > }
-> > alert(callSum(100));    // 1
+> > var osum = sum.bind(o);
+> > sum();     // 1
+> > osum();    // 100
 > > ```
 >
 > ##### apply\(\) 和 call\(\) :
