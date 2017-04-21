@@ -32,4 +32,6 @@
 * [RegExp](yin-yong-lei-xing/regexp.md)
 * [Function](yin-yong-lei-xing/function.md)
 * [基本包装类型](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing.md)
+  * [Boolean 和 Number](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing/boolean-he-number.md)
+  * [String](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing/string.md)
 
