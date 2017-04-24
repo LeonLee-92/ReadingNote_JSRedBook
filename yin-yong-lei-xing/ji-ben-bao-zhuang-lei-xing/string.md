@@ -43,7 +43,7 @@
 > > var result = stringValue + "world" + "!";
 > > alert(result);    // "hello world!"
 > > ```
-
+>
 > #### slice\(\)、substr\(\)和substring\(\)：获得子字符串方法
 >
 > > ##### 第一个参数： 起始位置，第二个参数：到哪里结束（可省略）
@@ -58,7 +58,7 @@
 > > alert(stringValue.substr(3, 7));     // "lo worl"   第二个参数传递的是长度
 > > ```
 > >
-> > #####  传入负值：
+> > ##### 传入负值：
 > >
 > > > #### 注意：书中的规则有误！
 > > >
@@ -80,7 +80,7 @@
 
 ### 字符串位置方法：
 
-> #### indexOf\(\) 和 lastIndexOf\(\) 
+> #### indexOf\(\) 和 lastIndexOf\(\)
 >
 > ```js
 > var stringValue = "hello world";
@@ -113,7 +113,70 @@
 
 ### 字符串大小写转换：
 
-> toLowerCase\(\) 和 toUpperCase\(\)
+> #### toLowerCase\(\) 和 toUpperCase\(\)
+>
+> ```js
+> var stringValue = "hello world";
+> alert(stringValue.toUpperCase());    // "HELLO WORLD"
+> alert(stringValue.toLowerCase());    // "hello world"
+> ```
+>
+> #### toLocaleLowerCase\(\) 和 toLocaleUpperCase\(\)
+>
+> ##### 少数语言会为Unicode大小写转换应用特殊的规则，此方法可保证转换正确
+>
+> ```js
+> var stringValue = "hello world";
+> alert(stringValue.toLocaleUpperCase());    // "HELLO WORLD"
+> alert(stringValue.toLocaleLowerCase());    // "hello world"
+> ```
+
+### 字符串模式匹配：
+
+> #### match\(\) : 
+>
+> > ##### 和调用RegExp的exec\(\)本质相同传入字符串或RegExp对象
+> >
+> > ```js
+> > var text = "cat, bat, sat, fat";
+> > var pattern = /.at/;
+> >
+> > var matches = text.match(pattern); // 等同于 pattern.exec(text)
+> > alert(matches.index);        // 0
+> > alert(matches.input);        // "cat, bat, sat, fat"
+> > alert(pattern[0]);           // "cat"
+> > alert(pattern.lastIndex);    // 书中有误，数组中无此元素
+> > ```
+>
+> #### search\(\) : 
+>
+> > ##### 传入字符串或RegExp对象，返回索引
+>
+> > ```js
+> > var text = "cat, bat, sat, fat";
+> > var pattern = /.at/;
+> > alert(text.search(pattern));    // 0
+> > pattern = /at/;
+> > alert(text.search(pattern));    // 1
+> > ```
+>
+> #### replace\(\) : 
+>
+> > 第一个参数是字符串或RegExp对象，第二个是要用来替换的字符串
+> >
+> > 如果第一个参数是字符串，只会替代第一个匹配对象
+> >
+> > 想要替换所有子字符串，第一个参数需传入RegExp对象，且要指定g标志
+> >
+> > ```
+> >
+> > ```
+>
+> #### htmlEscape\(\) : 
+>
+> #### split\(\) :
+
+
 
 
 
