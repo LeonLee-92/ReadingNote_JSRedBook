@@ -29,19 +29,33 @@ var person = {
 > >
 > > ##### \[\[Value\]\]：包含这个属性的数据值。这个特性的默认值为undefined。
 >
-> #### Object.defineProperty\(\)
+> > #### Object.defineProperty\(\)
 >
-> > ```js
-> > var person = new Object()
-> > person.name = "abc";
-> > Object.defineProperty(person, "name", {
-> >       writable: false,
-> >       value: "def"
-> > });
-> > alert(person.name);      // "def"
-> > delete person.name;
-> > alert(person.name);      // "def"
-> > ```
+> > > ```js
+> > > var person = new Object()
+> > > person.name = "abc";
+> > > Object.defineProperty(person, "name", {
+> > >       configurable: false,
+> > >       value: "def"
+> > > });
+> > > alert(person.name);      // "def"
+> > > delete person.name;
+> > > alert(person.name);      // "def"
+> > > ```
+> >
+> > > ```js
+> > > var person = new Object()
+> > > person.name = "abc";
+> > > Object.defineProperty(person, "name", {
+> > >       writable: false,
+> > >       value: "def"
+> > > });
+> > > alert(person.name);      // "def"
+> > > person.name = "abc";
+> > > alert(person.name);      // "def"
+> > > ```
+> > >
+> > > ##### 可以多次调用Object.defineProperty\(\)方法修改同一个属性，但是吧configurable设置为false后就不可以了
 
 
 
