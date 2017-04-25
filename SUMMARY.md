@@ -34,4 +34,5 @@
 * [基本包装类型](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing.md)
   * [Boolean 和 Number](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing/boolean-he-number.md)
   * [String](yin-yong-lei-xing/ji-ben-bao-zhuang-lei-xing/string.md)
+* [单体内置对象](yin-yong-lei-xing/dan-ti-nei-zhi-dui-xiang.md)
 
