@@ -36,10 +36,10 @@
 > | 字面量模式（/pattern/flags ） | 等价字符串（new RegExp\("pattern", "flags"\)） |
 > | :---: | :---: |
 > | /\\[bc\\]at/ | "\\[bc\\]at" |
-> | /.at/ | "\.at" |
+> | /.at/ | ".at" |
 > | /name\/age/ | "name\/age" |
 > | /\d.\d{l,2}/ | "\d.\d\[l,2}" |
-> | /\w\hello\123/ | "\w\\hello\\123" |
+> | /\w\hello\123/ | "\w\hello\123" |
 >
 > #### 不同：
 >
@@ -100,7 +100,7 @@
 > > var matches = pattern1.exec(text);
 > > alert(matches.index);       // 0
 > > alert(matches[0]);          // cat
-> > alert(pattern1.lastIndex);  // 0
+> > alert(pattern1.lastIndex);  // 3
 > >
 > > matches = pattern1.exec(text);
 > > alert(matches.index);       // 5
@@ -136,7 +136,7 @@
 > > | leftContext | $、 | input字符串中lastMatch之前的文本 |
 > > | multiline | $\* | 布尔值，是否所有表达式都使用多行 |
 > > | rightContext | $' | Input字符串中lastMatch之后的文本 |
->
+> >
 > > ![](/assets/01427.jpg)
 >
 > #### 用于存储捕获组的属性：

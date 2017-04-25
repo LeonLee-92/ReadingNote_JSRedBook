@@ -44,15 +44,13 @@
 > ```js
 > alert(person.name); 
 > // 等同于
-> alert(person["name"]); 
+> alert(person["name"]);
 > ```
 >
 > ```js
 > var propertyName = "first name"; //点语法无法访问的属性
 > person[propertyName] = "liyan";  //通过方括号访问
 > ```
-
-
 
 
 
