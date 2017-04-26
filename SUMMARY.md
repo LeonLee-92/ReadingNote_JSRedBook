@@ -40,4 +40,7 @@
 
 * [理解对象](mian-xiang-dui-xiang-de-cheng-xu-she-ji/li-jie-dui-xiang.md)
 * [创建对象](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang.md)
+  * [工厂模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/gong-chang-mo-shi.md)
+  * [构造函数模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/gou-zao-han-shu-mo-shi.md)
+  * [原型模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/yuan-xing-mo-shi.md)
 
