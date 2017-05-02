@@ -80,7 +80,7 @@
 >     alert(this.name);
 > };
 >
-> var peroson1 = new Person();
+> var person1 = new Person();
 > var person2 = new Person();
 >
 > alert(person1..hasOwnProperty("name"));    // false
@@ -191,6 +191,66 @@
 > > >     value : Person
 > > > });
 > > > ```
+
+### 原型的动态性
+
+> ```js
+> function Person() {}
+> var friend = new Person();
+> Person.prototype.sayHi = function() {
+>     alert("hi");
+> }
+> friend.sayHi();    // "hi"
+> ```
+>
+> ```js
+> function Person() {}
+> var friend = new Person();
+> Person.prototype = {
+>     name : "liyan",
+>     age : 18,
+>     job : "teacher",
+>     sayName : function(){
+>         alert(this.name);
+>     }
+> }
+> friend.sayName();   // error
+> ```
+
+### 原生对象的原型
+
+> #### 所有原生对象也都是采用原型模式创建的
+>
+> ```js
+> String.prototype.startsWith = function(text) {
+>     return = this.indexOf(text) == 0;
+> }
+> var msg = "Hello world";
+> alert(msg.startsWith('Hello'));    // true
+> ```
+>
+> ##### 作者不推荐修改原生对象的原型。
+
+### 原型对象的问题
+
+> #### 属性共享带来的问题：
+>
+> ```js
+> function Person() {}
+> Person.prototype = {
+>     name: "liyan",
+>     friends : ["jiangxiaoni", "zhouyuan"];
+> }
+>
+> var person1 = new Person();
+> var person2 = new Person();
+>
+> person1.friends.push("donglele");
+>
+> alert(person1.friends);    // "jiangxiaoni, zhouyuan, donglele"
+> alert(person1.friends);    // "jiangxiaoni, zhouyuan, donglele"
+> alert(person1.friends == person2.friends);    // true
+> ```
 
 
 
