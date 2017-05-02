@@ -18,11 +18,11 @@
 > alert(person1.sayName == person2.sayName);    // true
 > ```
 >
-> ![](/assets/01181.jpg) 
+> ![](/assets/01181.jpg)
 >
 > ![](/assets/WechatIMG1.jpg)
 >
-> ##### 所有原型对象会自动获得constructor属性，指向prototype属性所在的函数 
+> ##### 所有原型对象会自动获得constructor属性，指向prototype属性所在的函数
 >
 > ##### 每个函数  都有一个prototype属性，指向一个包含共享属性和方法的对象（通过构造函数创建的实例的原型对象）
 >
@@ -66,6 +66,42 @@
 > > #### hasOwnProperty\(\) :
 > >
 > > ##### 只有存在实例属性返回true
+
+### 原型与in操作符
+
+> ```js
+> function Person() {
+> }
+>
+> Person.prototype.name = "liyan";
+> Person.prototype.age = 18;
+> Person.prototype.job = "teacher";
+> Person.prototype.sayName = function() {
+>     alert(this.name);
+> };
+>
+> var peroson1 = new Person();
+> var person2 = new Person();
+>
+> alert(person1..hasOwnProperty("name"));    // false
+> alert("name" in person1);    // true
+>
+> person1.name = "jiangxiaoni";
+> alert(person1.name);    // jiangxiaoni  --来自实例
+> alert(person1..hasOwnProperty("name"));    // true
+> alert("name" in person1);    // true
+>
+> alert(person2.name);    // liyan  --来自原型
+> alert(person1..hasOwnProperty("name"));    // false
+> alert("name" in person1);    // true
+>
+> delete person1.name;
+> alert(person1.name);    // liyan  --来自原型
+> alert(person1..hasOwnProperty("name"));    // false
+> alert("name" in person1);    // true
+> ```
+>
+> IE
 
 
 
