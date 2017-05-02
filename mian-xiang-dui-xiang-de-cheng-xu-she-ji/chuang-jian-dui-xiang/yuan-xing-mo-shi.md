@@ -101,7 +101,96 @@
 > alert("name" in person1);    // true
 > ```
 >
-> IE
+> #### 取对象所有可枚举的实例属性，可以使用Object.keys\(\)方法：
+>
+> ```js
+> function Person() {
+> }
+>
+> Person.prototype.name = "liyan";
+> Person.prototype.age = 18;
+> Person.prototype.job = "teacher";
+> Person.prototype.sayName = function() {
+>     alert(this.name);
+> };
+>
+> var keys = Object.keys(Person.prototype);
+> alert(keys);    // "name, age, job, sayName"
+> var p1 = new Person();
+> p1.name = "liyan";
+> p1.age = 17;
+> var p1keys = object.keys(p1);
+> alert(p1keys);    // "name, age"
+> ```
+>
+> #### 取实例属性，无论是否可枚举，可以使用Object.getOwnPropertyNames\(\)方法：
+>
+> ```js
+> var keys = Object.getOwnPropertyNames(Person.prototype);
+> alert(keys);    // "constructor, name, age, job, sayName"  --包含了不可枚举的constructor属性
+> ```
+
+### 更简单的原型语法
+
+> ```js
+> function Person() {}
+> Person.prototype = {
+>     name : "liyan",
+>     age : 18,
+>     job : "teacher",
+>     sayName : function(){
+>         alert(this.name);
+>     }
+> }
+> ```
+>
+> ##### 此做法会导致constructor属性不再指向Person，指向新对象的constructor，即Object
+>
+> ##### instanceof可以返回正确的结果
+>
+> ```js
+> var friend = new Person();
+>
+> alert(friend instanceof Object);    // true
+> alert(friend instanceof Person);    // true
+> alert(friend.constructor == Person);    // false
+> alert(friend.constructor == Object);    // true
+> ```
+>
+> #### 重设constructor属性：
+>
+> > ```js
+> > function Person() {}
+> > Person.prototype = {
+> >     constructor : Person,
+> >     name : "liyan",
+> >     age : 18,
+> >     job : "teacher",
+> >     sayName : function(){
+> >         alert(this.name);
+> >     }
+> > }
+> > ```
+> >
+> > ##### 问题：导致constructor属性的Enumerable特性被设置为true
+> >
+> > #### 优化：
+> >
+> > > ```js
+> > > function Person() {}
+> > > Person.prototype = {
+> > >     name : "liyan",
+> > >     age : 18,
+> > >     job : "teacher",
+> > >     sayName : function(){
+> > >         alert(this.name);
+> > >     }
+> > > }
+> > > Object.defineProperty(Person.prototype, "constructor", {
+> > >     enumerable : false,
+> > >     value : Person
+> > > });
+> > > ```
 
 
 
