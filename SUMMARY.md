@@ -46,5 +46,5 @@
   * [组合模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/zu-he-mo-shi.md)
   * [动态原型模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/dong-tai-yuan-xing-mo-shi.md)
   * [寄生构造函数模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/ji-sheng-gou-zao-han-shu-mo-shi.md)
-  * [稳妥的构造函数模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/wen-tuo-de-gou-zao-han-shu-mo-shi.md)
+  * [稳妥构造函数模式](mian-xiang-dui-xiang-de-cheng-xu-she-ji/chuang-jian-dui-xiang/wen-tuo-de-gou-zao-han-shu-mo-shi.md)
 
