@@ -2,7 +2,7 @@
 
 ```js
 function Person(name, age, job){
-    
+
     var o = new Object();
     o.sayName = function() {
         alert(name);
