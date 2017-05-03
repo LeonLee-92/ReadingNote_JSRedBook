@@ -60,7 +60,7 @@
 > > ```js
 > > function ParentType() {
 > >     this.colors = ["red", "blue", "green"];
-> > } 
+> > }
 > > ```
 
 
